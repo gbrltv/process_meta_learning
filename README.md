@@ -14,6 +14,8 @@
 - [Installation](#installation)
 - [Experimental Setup](#experimental-setup)
   - [Data preparation](#data-preparation)
+  - [Extracting Meta-features](#extracting-meta-features)
+  - [Model Quality Metrics](#model-quality-metrics)
 - [References](#references)
 - [Contributors](#contributors)
 
@@ -26,3 +28,52 @@ Clone this repo to your local machine using
 ```shell
 git clone https://github.com/gbrltv/process_meta_learning.git
 ```
+
+## Experimental Setup
+
+### Data preparation
+
+
+Before running the experiments, it is necessary to convert the original logs (`xes.gz`) to the `xes` format (entropy extraction does not accept `xes.gz` files). For that, run:
+
+```shell
+python3 convert_log_files.py
+```
+
+This code converts files under the `event_logs` folder and removes the original files.
+
+
+### Extracting Meta-features
+
+To extract the meta-features from event logs, simply run the following line of code:
+
+```shell
+python3 extract_features.py
+```
+
+The meta-features are saved under the `results` folder with the name `log_features.csv`.
+
+
+### Model Quality Metrics
+
+To compute model quality metrics (fitness, precision, generalization, simplicity), run the following code:
+
+
+```shell
+python3 model_metrics.py
+```
+
+The quality metrics (along with their computation time) are saved under the `results` folder with the name `model_metrics.csv`.
+
+
+
+## References
+
+Stay tuned!
+
+
+## Contributors
+
+- [Gabriel Marques Tavares](https://www.researchgate.net/profile/Gabriel_Tavares6), PhD candidate at Università degli Studi di Milano
+- [Paolo Ceravolo](https://www.unimi.it/en/ugov/person/paolo-ceravolo), Associate Professor at Università degli Studi di Milano
+- [Sylvio Barbon Junior](http://www.barbon.com.br/), Associate Professor at State University of Londrina
