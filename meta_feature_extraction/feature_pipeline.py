@@ -11,7 +11,7 @@ from .entropies import entropies
 def pipeline(event_logs_path, log_name):
     log = xes_importer.apply(
         f"{event_logs_path}/{log_name}",
-        variant=xes_importer.Variants.LINE_BY_LINE
+        parameters={"show_progress_bar": False}
     )
 
     features = [log_name.split(".xes")[0]]

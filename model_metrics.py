@@ -71,6 +71,8 @@ def extract_metrics(log, net, im, fm):
 model_metrics = []
 event_logs_path = "event_logs"
 
+print("Extracting model quality metrics")
+
 # loop through logs, discover model and extract features
 for file in tqdm(sort_files(os.listdir(event_logs_path))):
     log_name = file.split(".xes")[0]
@@ -103,4 +105,7 @@ for file in tqdm(sort_files(os.listdir(event_logs_path))):
         model_metrics.append([log_name, miner, *extract_metrics(log, net, im, fm)])
 
 # save file
-pd.DataFrame(model_metrics, columns=columns).to_csv("model_metrics.csv", index=False)
+output_path = "results"
+os.makedirs(output_path, exist_ok=True)
+
+pd.DataFrame(model_metrics, columns=columns).to_csv(f"{output_path}/model_metrics.csv", index=False)
