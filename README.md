@@ -16,6 +16,7 @@
   - [Data preparation](#data-preparation)
   - [Extracting Meta-features](#extracting-meta-features)
   - [Model Quality Metrics](#model-quality-metrics)
+  - [Evaluating Results](https://github.com/gbrltv/process_meta_learning/blob/main/evaluation.ipynb)
 - [References](#references)
 - [Contributors](#contributors)
 
