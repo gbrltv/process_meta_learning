@@ -66,7 +66,9 @@ python3 model_metrics.py
 
 The quality metrics (along with their computation time) are saved under the `results` folder with the name `model_metrics.csv`.
 
+### Evaluating Results
 
+For an in-depth analysis of results, classification performance, model relevance, and quality metrics, please take a look [here](https://github.com/gbrltv/process_meta_learning/blob/main/evaluation.ipynb).
 
 ## References
 
