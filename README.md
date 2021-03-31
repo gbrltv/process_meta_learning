@@ -72,8 +72,7 @@ For an in-depth analysis of results, classification performance, model relevance
 
 ## References
 
-Stay tuned!
-
+[Barbon Jr., S., Ceravolo, P., Damiani, E., Tavares, G.M.: Using Meta-learning to Recommend Process Discovery Methods, 2021](https://arxiv.org/abs/2103.12874)
 
 ## Contributors
 
