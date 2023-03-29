@@ -30,6 +30,12 @@ Clone this repo to your local machine using
 git clone https://github.com/gbrltv/process_meta_learning.git
 ```
 
+To directly use meta feature extraction methods via `import`
+```shell
+cd process_meta_learning
+pip install -e .
+```
+
 ## Experimental Setup
 
 ### Data preparation
